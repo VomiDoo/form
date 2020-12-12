@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{ background: url(https://mhcd.org/wp-content/uploads/2018/02/Hearts-background-4.jpg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Анкета</h1>
+    </header>
+    <main>
+        <form action="/example/handler.php" id="form">
+            <fieldset>
+                <legend><b>Личная информация</b></legend>
+                <p><label for="name">Имя</label> <input type="text" id="name"></p>
+                <p><label for="sname">Фамилия</label> <input type="text" id="sname"></p>
+                <p><label for="age">Возраст</label> <input type="number" id="age"></p>
+                <p><label for="number">Номер телефона</label> <input type="tel" id="number"></p>
+                <p><label for="country">Страна проживания</label>
+                    <select name="country" id="country">
+                        <option value="belarus">Респулика Беларусь</option>
+                    </select></p>
+                <p><label for="textarea">О себе</label></p>
+                <textarea name="text" id="textarea" placeholder="Расскажите немного о себе"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend><b>Регистрация</b></legend>
+                <p><label for="email">Email</label> <input type="email" id="email"></p>
+                <p><label for="password">Пароль</label><input type="password" id="password"></p>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <fieldset>
+            <legend><b>Подтвердите регистрацию</b></legend>
+            <input type="submit" form="form" value="Зарегистрироваться">
+            <input type="reset" form="form" value="Сбросить">
+        </fieldset>
+    </footer>
+</body>
+</html>

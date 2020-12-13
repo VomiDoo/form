@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{ background: url(https://mhcd.org/wp-content/uploads/2018/02/Hearts-background-4.jpg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Анкета</h1>
+    </header>
+    <form action="/example/handler.php" id="form">
+        <main>
+            <fieldset>
+                <legend><b>Личная информация</b></legend>
+                <p><label>Имя <input type="text"></label></p>
+                <p><label>Фамилия <input type="text"></label></p>
+                <p><label>Возраст <input type="number"></label></p>
+                <p><label>Номер телефона <input type="tel"></label></p>
+                <p><label for="country">Страна проживания</label>
+                    <select name="country" id="country">
+                        <option value="belarus">Респулика Беларусь</option>
+                    </select></p>
+                <p>Цель знакомства:</p>
+                <label><input type="radio" name="metter" value="text">Общение</label>
+                <label><input type="radio" name="metter" value="text">Любовь</label>
+                <label><input type="radio" name="metter" value="text">Поиск единомышленников</label>
+                <label><input type="radio" name="metter" value="text">Для здоровья</label>
+                <p><label for="textarea">О себе</label></p>
+                <textarea name="text" id="textarea" placeholder="Расскажите немного о себе"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend><b>Регистрация</b></legend>
+                <p><label>Email<input type="email"></label></p>
+                <p><label>Пароль<input type="password"></label></p>
+            </fieldset>
+        </main>
+        <footer>
+            <fieldset>
+                <legend><b>Подтвердите регистрацию</b></legend>
+                <input type="submit" form="form" value="Зарегистрироваться">
+                <input type="reset" form="form" value="Сбросить">
+            </fieldset>
+        </footer>
+    </form>
+</body>
+</html>
